@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_bold"
+        android:text="Настройки"
+        android:textColor="@color/grey"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_bold"
+        android:text="Звук"
+        android:textColor="@color/grey"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_bold"
+        android:text="Сложность"
+        android:textColor="@color/grey"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soundBar" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_bold"
+        android:text="Правила игры"
+        android:textColor="@color/grey"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prev_lvl" />
+
+    <TextView
+        android:id="@+id/infoLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_bold"
+        android:text="Легко"
+        android:textColor="@color/grey"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/prev_lvl"
+        app:layout_constraintEnd_toStartOf="@+id/next_lvl"
+        app:layout_constraintStart_toEndOf="@+id/prev_lvl"
+        app:layout_constraintTop_toTopOf="@+id/prev_lvl" />
+
+    <SeekBar
+        android:id="@+id/soundBar"
+        android:layout_width="368dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:progress="30"
+        android:progressDrawable="@drawable/style_seekbar"
+        android:splitTrack="false"
+        android:thumb="@drawable/ic_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/prev_lvl"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/previous"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/next_lvl"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/next"
+        tools:ignore="TouchTargetSizeCheck"/>
+
+    <CheckBox
+        android:id="@+id/checkBox_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:button="@drawable/style_checkbox"
+        android:checked="false"
+        android:fontFamily="@font/zen_kaku_gothic_new_bold"
+        android:paddingLeft="8dp"
+        android:text="Ряд по вертикали"
+        android:textColor="@color/grey"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:button="@drawable/style_checkbox"
+        android:fontFamily="@font/zen_kaku_gothic_new_bold"
+        android:paddingLeft="8dp"
+        android:text="Ряд по горизонтали"
+        android:textColor="@color/grey"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_vertical"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox_diagonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:button="@drawable/style_checkbox"
+        android:fontFamily="@font/zen_kaku_gothic_new_bold"
+        android:paddingLeft="8dp"
+        android:text="Ряд по диагонали"
+        android:textColor="@color/grey"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_horizontal"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/toback"
+        style="@style/style_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Вернуться"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_diagonal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="preference_file_key">Tic-Tac-Toe</string>
+
+    <string-array name="game_levels">
+        <item>ЛЕГКО</item>
+        <item>НОРМАЛЬНО</item>
+        <item>СЛОЖНО</item>
+    </string-array>
+    <string name="dialog_status_win">Вы выиграли!</string>
+</resources>
